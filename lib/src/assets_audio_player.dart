@@ -686,6 +686,10 @@ class AssetsAudioPlayer {
     await _openPlaylistCurrent();
   }
 
+  Future<void> reset(){
+    _currentPosition.add(Duration.zero);
+  }
+
   /// keepLoopMode:
   /// if true : the loopMode is .single => execute previous() will keep it .single
   /// if false : the loopMode is .single => execute previous() will set it as .playlist
